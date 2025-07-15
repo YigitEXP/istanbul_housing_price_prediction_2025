@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İstanbul Ev Fiyat Tahmini</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h1 class="hero-title">İstanbul'da Ev Fiyatınızı<br>Keşfedin</h1>
+                    <p class="hero-subtitle">İstanbul'un en güzel semtlerinde ev fiyat tahmini yapın</p>
+                    <div class="hero-image">
+                        <iframe
+                            width="100%"
+                            height="400"
+                            frameborder="0"
+                            style="border:0"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12034.22421916541!2d28.979530400000002!3d41.0082376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa3f33fc7b1db%3A0x8c73c0e2c3086cd8!2sİstanbul!5e0!3m2!1str!2str!4v1720701211000!5m2!1str!2str"
+                            allowfullscreen
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card prediction-card">
+                    <div class="card-header">
+                        <h2 class="text-center">Ev Fiyat Tahmin Formu</h2>
+                        <p class="text-center text-muted mb-0">İstanbul'da ev fiyatınızı tahmin edin</p>
+                    </div>
+                    <div class="card-body">
+                        <form id="predictionForm">
+                            <div class="mb-4">
+                                <label for="total_squaremeter" class="form-label">Toplam Metrekare</label>
+                                <input type="number" class="form-control" id="total_squaremeter" required placeholder="m²">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Oda Sayısı</label>
+                                <div class="radio-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="room" id="room1" value="1" required>
+                                        <label class="form-check-label" for="room1">1</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="room" id="room2" value="2">
+                                        <label class="form-check-label" for="room2">2</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="room" id="room3" value="3">
+                                        <label class="form-check-label" for="room3">3</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="room" id="room4" value="4">
+                                        <label class="form-check-label" for="room4">4</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="room" id="room5" value="5">
+                                        <label class="form-check-label" for="room5">5</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Salon Sayısı</label>
+                                <div class="radio-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="living_room" id="living_room0" value="0" required>
+                                        <label class="form-check-label" for="living_room0">0</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="living_room" id="living_room1" value="1">
+                                        <label class="form-check-label" for="living_room1">1</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="living_room" id="living_room2" value="2">
+                                        <label class="form-check-label" for="living_room2">2</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="living_room" id="living_room3" value="3">
+                                        <label class="form-check-label" for="living_room3">3</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Banyo Sayısı</label>
+                                <div class="radio-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="bath" id="bath1" value="1" required>
+                                        <label class="form-check-label" for="bath1">1</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="bath" id="bath2" value="2">
+                                        <label class="form-check-label" for="bath2">2</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="bath" id="bath3" value="3">
+                                        <label class="form-check-label" for="bath3">3</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="bath" id="bath4" value="4">
+                                        <label class="form-check-label" for="bath4">4</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Balkon Sayısı</label>
+                                <div class="radio-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="balcony" id="balcony0" value="0" required>
+                                        <label class="form-check-label" for="balcony0">0</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="balcony" id="balcony1" value="1">
+                                        <label class="form-check-label" for="balcony1">1</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="balcony" id="balcony2" value="2">
+                                        <label class="form-check-label" for="balcony2">2</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="balcony" id="balcony3" value="3">
+                                        <label class="form-check-label" for="balcony3">3</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="balcony" id="balcony4" value="4">
+                                        <label class="form-check-label" for="balcony4">4</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Semt</label>
+                                <select class="form-select" id="district" required>
+                                </select>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Tahmin Et</button>
+                            </div>
+
+                            <div id="predictionResult" class="mt-4">
+                                <div class="prediction-initial">
+                                    <h3>Evinizin tahmini değeri: 0 TL</h3>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2 class="footer-title" style="color: #000000;">İletişim</h2>
+                <h3 class="footer-title">Yiğit Can Aktürk</h3>
+                <div class="social-links mt-3">
+                    <a href="https://www.linkedin.com/in/yiğit-can-aktürk-6b48262b6/" target="_blank" class="social-link">
+                        <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn" class="social-icon">
+                        <span class="social-link-text">linkedin.com/in/yiğit-can-aktürk-6b48262b6/</span>
+                    </a>
+                    <a href="https://github.com/YigitEXP" target="_blank" class="social-link">
+                        <img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub" class="social-icon">
+                        <span class="social-link-text">github.com/YigitEXP</span>
+                    </a>
+                    <a href="mailto:ygtcann981@gmail.com" class="social-link">
+                        <img src="{{ url_for('static', filename='images/email.svg') }}" alt="Email" class="social-icon">
+                        <span class="social-link-text">ygtcann981@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
