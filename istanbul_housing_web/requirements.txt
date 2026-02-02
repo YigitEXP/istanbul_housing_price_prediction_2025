@@ -1,0 +1,4 @@
+flask==2.2.5
+scikit-learn==1.6.1
+numpy==1.26.1
+python-dotenv==1.0.0
