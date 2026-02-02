@@ -1,0 +1,302 @@
+:root {
+    --primary-color: #1e40af;
+    --secondary-color: #3b69d4;
+    --success-color: #16a34a;
+    --error-color: #dc2626;
+    --text-color: #1f2937;
+    --bg-color: #f3f4f6;
+    --gradient-start: #1e40af;
+    --gradient-end: #3b69d4;
+}
+
+body {
+    background-image: url("/static/images/istanbul_wallpaper.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+.hero-section {
+    padding: 4rem 0 2rem;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 0 0 2rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    max-height: 300px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Footer Styles */
+.footer {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-title {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: white;
+    padding: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-link-text {
+    font-size: 0.875rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.prediction-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.prediction-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 12px -4px rgb(0 0 0 / 0.1);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem 1rem 0 0;
+    text-align: center;
+}
+
+.card-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, #fff, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-body {
+    padding: 2.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0 0 1rem 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.radio-group {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0.5rem;
+}
+
+.form-check {
+    margin-bottom: 0.125rem;
+    flex: 1;
+    min-width: 70px;
+    padding: 0.5rem;
+}
+
+.form-check-label {
+    font-size: 0.9rem;
+}
+
+.form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+    outline: none;
+}
+
+.form-select {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+    outline: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    width: 100%;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.loading-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.loading-container.active {
+    display: block;
+}
+
+.loading-icon {
+    width: 50px;
+    height: 50px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M12 3v18M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9z"/></svg>') no-repeat center center;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.alert {
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.alert-success {
+    background-color: rgba(220, 252, 231, 0.95);
+    color: #16a34a;
+    border: 1px solid rgba(187, 247, 208, 0.5);
+}
+
+.alert-success.active {
+    transform: translateY(20px);
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 1rem;
+    }
+    
+    .card-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+    }
+    
+    .form-check {
+        flex: none;
+        width: 100%;
+    }
+}
